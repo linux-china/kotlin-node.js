@@ -1,4 +1,4 @@
-external fun require(module:String):dynamic
+external fun require(module: String): dynamic
 
 fun main(args: Array<String>) {
     println("Hello JavaScript!")
@@ -9,7 +9,8 @@ fun main(args: Array<String>) {
 
     app.get("/", { req, res ->
         res.type("text/plain")
-        res.send("i am a beautiful butterfly")
+        val nick = "Jacky"
+        res.send("Hi ${nick}, I am a beautiful butterfly.")
     })
 
     app.get("/amazon/:asin", { req, res ->
