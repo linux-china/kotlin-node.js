@@ -16,7 +16,7 @@ All source code is inside `src/main/kotlin/Main.kt`
 please use supervisor to reload js after file changed.
 ```
 npm install supervisor -g
-supervisor app.js
+supervisor node/index.js
 ```
 
 ### Development in IntelliJ IDEA
