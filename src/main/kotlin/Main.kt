@@ -7,21 +7,21 @@ fun main(args: Array<String>) {
     val app = express()
     val amazon = Amazon()
 
-    app.get("/", { req, res ->
+    app.get("/") { _, res ->
         res.type("text/plain")
         val nick = "Jacky"
-        res.send("Hi ${nick}, I am a beautiful butterfly.")
-    })
+        res.send("Hi $nick, I am a beautiful butterfly.")
+    }
 
-    app.get("/amazon/:asin", { req, res ->
+    app.get("/amazon/:asin") { req, res ->
         res.type("text/plain")
-        amazon.getAmazonPrice(req.params.asin) {
+        amazon.getAmazonPrice(req.params.asin as String) {
             res.send("Price is $it")
         }
-    })
+    }
 
-    app.listen(3000, {
+    app.listen(3000) {
         println("Listening on port 3000")
-    })
+    }
 }
 
