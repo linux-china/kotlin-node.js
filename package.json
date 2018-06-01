@@ -4,11 +4,11 @@
   "description": "Kotlin x Node.JS",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.15.2",
     "fs": "0.0.1-security",
-    "kotlin": "^1.1.0",
+    "express": "^4.16.3",
+    "kotlin": "^1.2.41",
     "node.js": "0.0.0",
-    "request": "^2.81.0"
+    "request": "^2.87.0"
   },
   "devDependencies": {},
   "scripts": {
